@@ -31,6 +31,18 @@ services:
     networks:
       - elastic
 
+#  logstash:
+#    image: docker.elastic.co/logstash/logstash:7.17.0
+#    container_name: logstash
+#    volumes:
+#     - "./logstash.conf:/usr/share/logstash/pipeline/logstash.conf:ro"
+#    ports:
+#      - 5044:5044
+#    networks:
+#      - elastic
+#    depends_on:
+#      - es01
+
 volumes:
   data01:
     driver: local
